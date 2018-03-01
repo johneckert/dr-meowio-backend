@@ -1,2 +1,0 @@
-class GameBoard < ApplicationRecord
-end

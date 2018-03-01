@@ -1,6 +1,6 @@
-class CreateGameBoards < ActiveRecord::Migration[5.1]
+class CreateLevels < ActiveRecord::Migration[5.1]
   def change
-    create_table :game_boards do |t|
+    create_table :levels do |t|
       t.integer :level
       t.integer :maxScore
 

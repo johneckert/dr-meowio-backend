@@ -11,6 +11,6 @@ userTwo = User.create(name: 'Andrea', hiScore: 0, hiLevel: 1)
 
 themeOne = Theme.create(colorOne: 'red', colorTwo: 'yellow', colorThree: 'blue', colorFour: 'green', name: 'Classic', background: 'white')
 
-levelOne = GameBoard.create(level: 1, maxScore: 100)
-levelTwo = GameBoard.create(level: 2, maxScore: 200)
-levelThree = GameBoard.create(level: 3, maxScore: 300)
+levelOne = Level.create(level: 1, maxScore: 100)
+levelTwo = Level.create(level: 2, maxScore: 200)
+levelThree = Level.create(level: 3, maxScore: 300)
