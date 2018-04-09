@@ -5,12 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+themes = ["glam", "mod", "pickle", "grape", "berry", "vitaminC", "baby", "pow"]
 
-userOne = User.create(name: 'John', hiScore:0, hiLevel: 1)
-userTwo = User.create(name: 'Andrea', hiScore: 0, hiLevel: 1)
-
-themeOne = Theme.create(colorOne: 'red', colorTwo: 'yellow', colorThree: 'blue', colorFour: 'green', name: 'Classic', background: 'white')
-
-levelOne = Level.create(level: 1, maxScore: 100)
-levelTwo = Level.create(level: 2, maxScore: 200)
-levelThree = Level.create(level: 3, maxScore: 300)
+themes.reverse.each do |theme|
+  Theme.create(colorOne: "#{theme}ColorOne", colorTwo: "#{theme}ColorTwo", colorThree: "#{theme}ColorThree", colorFour: "#{theme}ColorFour", name: "#{theme.titleize}", background: "#{theme}Background")
+end
