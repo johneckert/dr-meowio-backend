@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228213330) do
+ActiveRecord::Schema.define(version: 20180410185937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "highscores", force: :cascade do |t|
+    t.integer "score"
+    t.string "initials"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "themes", force: :cascade do |t|
     t.string "colorOne"
@@ -22,13 +29,6 @@ ActiveRecord::Schema.define(version: 20180228213330) do
     t.string "colorFour"
     t.string "name"
     t.string "background"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.integer "hiScore"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
