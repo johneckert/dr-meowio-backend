@@ -16,7 +16,8 @@ class HighscoresController < ApplicationController
 
 
   def calculate_top_ten
-    highscores = Highscore.all
+    highscores = Highscore.all.select { |hs| hs.score.is_a? Integer}
+
     top_ten = highscores.sort {|a, b| b.score <=> a.score}.first(10)
   end
 
